@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@400;700&display=swap');
+
+$mobile:375px;
+$desktop:1440px;
+
+$primary-green: hsl(163, 72%, 41%);
+$primary-red: hsl(356, 69%, 56%);
+
+$facebook:hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear gradient hsl(37, 97%, 70%), hsl(329, 70%, 58%);
+$youtube: hsl(348, 97%, 39%);
+
+$toggle-dark: linear-gradient hsl(210, 78%, 56%), hsl(146, 68%, 55%);
+$toggle-light:hsl(230, 22%, 74%); 
+
+$bg-dark-blue:  hsl(230, 17%, 14%);
+$top-bg-dark-blue:hsl(232, 19%, 15%);
+$bg-desaturated-blue:hsl(228, 28%, 20%);
+$text-desaturated-blue: hsl(228, 34%, 66%);
+$text-white:hsl(0, 0%, 100%);
+
+$bg-white: hsl(0, 0%, 100%);
+$t0p-bg-pale-blue:hsl(225, 100%, 98%);
+$bg-grayish-blue:hsl(227, 47%, 96%);
+$text-grayish-blue: hsl(228, 12%, 44%);
+$text-dark-blue:hsl(230, 17%, 14%);
+
+*{
+  box-sizing: border-box;  
+}
+
+body{
+    margin: 0;
+    font-family:'Inter',  'Courier New', Courier, monospace;
+    padding: 0;
+    background-color:$bg-dark-blue;
+}
+
+.container{
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+
+  
+&__heading{
+  font: size 1.2rem;
+  color:$text-white;
+  font-weight: 700; 
+}
+
+&__followers{
+   font-size: 0.6rem;
+   font-weight: 700;
+   display: block;
+   margin-top: 5px;
+   color: $text-desaturated-blue;
+}
+
+&__toggle{
+   display: flex;
+   align-items: center;
+
+   &-mode{
+     font-size: 0.5rem;
+     font-weight:700;
+     color:  $text-desaturated-blue;
+   }
+
+  &-input{
+    position: absolute;
+    visibility: hidden;
+  }
+
+   &-label{
+     margin-left: 10px;
+     display: block;
+     width: 50px;
+     height: 30px;
+      background: hsl(163, 72%, 41%);
+
+       border-radius: 30px; 
+       position: relative;  
+
+       &::after{
+         content: "";
+         width: 25px;
+         height:25px ;
+         background-color:$bg-dark-blue;
+         position: absolute;
+         top:3px;
+         left:3px;
+         border-radius: 50%;
+         transition: left 300ms;
+       }
+   }
+   &-input:checked ~ &-label::after{
+     left: 27px;
+   } 
+}
+}
+
+.highlights{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4,1fr);
+
+}
+
+.highlight{
+  background-color:$bg-desaturated-blue;
+  padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+   &--facebook::before{
+     background:$facebook ;
+   }
+   &--twitter::before{
+    background: $twitter;
+  }
+  &--instagram::before{
+    background: $instagram;
+  }
+  &--youtube::before{
+    background:$youtube ;
+  }
+
+  &::before{
+    content: "";
+    height: 50px;
+    border-radius: 5px;
+    z-index:-1;
+    width: 100%;
+    position: absolute;
+    top: -3px;
+    left:0;
+  }
+
+
+&__user,
+&__progress{
+  display: flex;
+}
+
+
+
+&__user{
+  display: flex;
+  align-items: center;
+  &-icon{
+    width: 15px;
+    height: 10px;
+    margin-right: 5px;
+  }
+  &-name{
+    font-weight: 700;
+    font-size: 0.5rem;
+    color:$text-desaturated-blue;
+    &::before{
+      content: "hannah";
+    }
+
+  &::after{
+    content: "hannah";
+  }
+  }
+}
+&__count{
+  text-align: center;
+  margin: 25px 0;
+
+  &-number{
+    font-size: 3.5rem;
+    font-weight:700;
+    letter-spacing:-3px;
+    color: $text-white;
+  }
+  &-label{
+   font-size: 0.6rem;
+   text-transform: uppercase;
+   color: $text-desaturated-blue;
+   letter-spacing: 4px;
+  }
+}
+&__progress{
+  &--up{
+    color: $primary-green;
+  }
+  &--down{
+    color: $primary-red;
+  }
+  display: flex;
+  align-items: center;
+
+  &-icon{
+    width: 5px;
+    height: 5px;
+    margin-right: 3px;
+  }
+}
+}
+ 
+.overview-Today{
+  display: grid;
+  gap:20px;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.overview-facebook-card{
+   background-color: $bg-desaturated-blue;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.page--views{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-top: 12px;
+}
+
+.card-number{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.facebook-page{
+  font-size: 15px;
+  
+}
+
+.facebook-icon{
+   padding-right:25px;
+   margin-bottom: 10px;
+}
+
+
+
+
+

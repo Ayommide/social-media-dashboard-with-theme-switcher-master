@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Courier New", Courier, monospace;
+  padding: 0;
+  background-color: hsl(230deg, 17%, 14%);
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__heading {
+  font: size 1.2rem;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+}
+.header__followers {
+  font-size: 0.6rem;
+  font-weight: 700;
+  display: block;
+  margin-top: 5px;
+  color: hsl(228deg, 34%, 66%);
+}
+.header__toggle {
+  display: flex;
+  align-items: center;
+}
+.header__toggle-mode {
+  font-size: 0.5rem;
+  font-weight: 700;
+  color: hsl(228deg, 34%, 66%);
+}
+.header__toggle-input {
+  position: absolute;
+  visibility: hidden;
+}
+.header__toggle-label {
+  margin-left: 10px;
+  display: block;
+  width: 50px;
+  height: 30px;
+  background: hsl(163deg, 72%, 41%);
+  border-radius: 30px;
+  position: relative;
+}
+.header__toggle-label::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: hsl(230deg, 17%, 14%);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+  transition: left 300ms;
+}
+.header__toggle-input:checked ~ .header__toggle-label::after {
+  left: 27px;
+}
+
+.highlights {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.highlight {
+  background-color: hsl(228deg, 28%, 20%);
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.highlight--facebook::before {
+  background: hsl(208deg, 92%, 53%);
+}
+.highlight--twitter::before {
+  background: hsl(203deg, 89%, 53%);
+}
+.highlight--instagram::before {
+  background: linear gradient hsl(37deg, 97%, 70%), hsl(329deg, 70%, 58%);
+}
+.highlight--youtube::before {
+  background: hsl(348deg, 97%, 39%);
+}
+.highlight::before {
+  content: "";
+  height: 50px;
+  border-radius: 5px;
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  top: -3px;
+  left: 0;
+}
+.highlight__user, .highlight__progress {
+  display: flex;
+}
+.highlight__user {
+  display: flex;
+  align-items: center;
+}
+.highlight__user-icon {
+  width: 15px;
+  height: 10px;
+  margin-right: 5px;
+}
+.highlight__user-name {
+  font-weight: 700;
+  font-size: 0.5rem;
+  color: hsl(228deg, 34%, 66%);
+}
+.highlight__user-name::before {
+  content: "hannah";
+}
+.highlight__user-name::after {
+  content: "hannah";
+}
+.highlight__count {
+  text-align: center;
+  margin: 25px 0;
+}
+.highlight__count-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -3px;
+  color: hsl(0deg, 0%, 100%);
+}
+.highlight__count-label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  color: hsl(228deg, 34%, 66%);
+  letter-spacing: 4px;
+}
+.highlight__progress {
+  display: flex;
+  align-items: center;
+}
+.highlight__progress--up {
+  color: hsl(163deg, 72%, 41%);
+}
+.highlight__progress--down {
+  color: hsl(356deg, 69%, 56%);
+}
+.highlight__progress-icon {
+  width: 5px;
+  height: 5px;
+  margin-right: 3px;
+}
+
+.overview-Today {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.overview-facebook-card {
+  background-color: hsl(228deg, 28%, 20%);
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+.page--views {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-top: 12px;
+}
+
+.card-number {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.facebook-page {
+  font-size: 15px;
+}
+
+.facebook-icon {
+  padding-right: 25px;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=style.css.map */
