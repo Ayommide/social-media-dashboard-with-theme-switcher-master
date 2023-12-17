@@ -3,6 +3,9 @@
   box-sizing: border-box;
 }
 
+/* Toggle Switch Styling:
+TOGGLE DOESNT WORK
+The styling for the dark mode toggle switch is well-done, particularly the hidden input and styled label. */
 body {
   margin: 0;
   font-family: "Inter", "Courier New", Courier, monospace;
@@ -22,6 +25,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+/* There's a small typo in .header__heading. It should be font-size instead of font: size. */
 .header__heading {
   font: size 1.2rem;
   color: hsl(0deg, 0%, 100%);
@@ -92,6 +96,7 @@ body {
 .highlight--twitter::before {
   background: hsl(203deg, 89%, 53%);
 }
+/* The .highlight--instagram::before selector seems to have a syntax error in background: linear gradient. It should be background: linear-gradient. */
 .highlight--instagram::before {
   background: linear gradient hsl(37deg, 97%, 70%), hsl(329deg, 70%, 58%);
 }
@@ -138,7 +143,8 @@ body {
 .highlight__count-number {
   font-size: 3.5rem;
   font-weight: 700;
-  letter-spacing: -3px;
+  letter-spacing: -3px; 
+  /* Be aware of the negative letter-spacing in .highlight__count-number, which can sometimes make text hard to read. */
   color: hsl(0deg, 0%, 100%);
 }
 .highlight__count-label {
@@ -199,4 +205,5 @@ body {
 .facebook-icon {
   padding-right: 25px;
   margin-bottom: 10px;
+  /* The .facebook-icon class has a right padding that might be excessive depending on your layout. */
 }/*# sourceMappingURL=style.css.map */
