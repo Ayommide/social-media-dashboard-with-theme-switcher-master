@@ -3,14 +3,11 @@
   box-sizing: border-box;
 }
 
-/* Toggle Switch Styling:
-TOGGLE DOESNT WORK
-The styling for the dark mode toggle switch is well-done, particularly the hidden input and styled label. */
 body {
   margin: 0;
   font-family: "Inter", "Courier New", Courier, monospace;
   padding: 0;
-  background-color: hsl(230deg, 17%, 14%);
+  background-color: hsl(230, 17%, 14%);
 }
 
 .container {
@@ -25,10 +22,9 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-/* There's a small typo in .header__heading. It should be font-size instead of font: size. */
 .header__heading {
   font: size 1.2rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-weight: 700;
 }
 .header__followers {
@@ -36,7 +32,7 @@ body {
   font-weight: 700;
   display: block;
   margin-top: 5px;
-  color: hsl(228deg, 34%, 66%);
+  color: hsl(228, 34%, 66%);
 }
 .header__toggle {
   display: flex;
@@ -45,7 +41,7 @@ body {
 .header__toggle-mode {
   font-size: 0.5rem;
   font-weight: 700;
-  color: hsl(228deg, 34%, 66%);
+  color: hsl(228, 34%, 66%);
 }
 .header__toggle-input {
   position: absolute;
@@ -56,7 +52,7 @@ body {
   display: block;
   width: 50px;
   height: 30px;
-  background: hsl(163deg, 72%, 41%);
+  background: hsl(163, 72%, 41%);
   border-radius: 30px;
   position: relative;
 }
@@ -64,7 +60,7 @@ body {
   content: "";
   width: 25px;
   height: 25px;
-  background-color: hsl(230deg, 17%, 14%);
+  background-color: hsl(230, 17%, 14%);
   position: absolute;
   top: 3px;
   left: 3px;
@@ -82,7 +78,7 @@ body {
 }
 
 .highlight {
-  background-color: hsl(228deg, 28%, 20%);
+  background-color: hsl(228, 28%, 20%);
   padding: 20px 30px;
   display: flex;
   flex-direction: column;
@@ -91,17 +87,16 @@ body {
   position: relative;
 }
 .highlight--facebook::before {
-  background: hsl(208deg, 92%, 53%);
+  background: hsl(208, 92%, 53%);
 }
 .highlight--twitter::before {
-  background: hsl(203deg, 89%, 53%);
+  background: hsl(203, 89%, 53%);
 }
-/* The .highlight--instagram::before selector seems to have a syntax error in background: linear gradient. It should be background: linear-gradient. */
 .highlight--instagram::before {
-  background: linear gradient hsl(37deg, 97%, 70%), hsl(329deg, 70%, 58%);
+  background: linear gradient hsl(37, 97%, 70%), hsl(329, 70%, 58%);
 }
 .highlight--youtube::before {
-  background: hsl(348deg, 97%, 39%);
+  background: hsl(348, 97%, 39%);
 }
 .highlight::before {
   content: "";
@@ -128,7 +123,7 @@ body {
 .highlight__user-name {
   font-weight: 700;
   font-size: 0.5rem;
-  color: hsl(228deg, 34%, 66%);
+  color: hsl(228, 34%, 66%);
 }
 .highlight__user-name::before {
   content: "hannah";
@@ -143,14 +138,13 @@ body {
 .highlight__count-number {
   font-size: 3.5rem;
   font-weight: 700;
-  letter-spacing: -3px; 
-  /* Be aware of the negative letter-spacing in .highlight__count-number, which can sometimes make text hard to read. */
-  color: hsl(0deg, 0%, 100%);
+  letter-spacing: -3px;
+  color: hsl(0, 0%, 100%);
 }
 .highlight__count-label {
   font-size: 0.6rem;
   text-transform: uppercase;
-  color: hsl(228deg, 34%, 66%);
+  color: hsl(228, 34%, 66%);
   letter-spacing: 4px;
 }
 .highlight__progress {
@@ -158,10 +152,10 @@ body {
   align-items: center;
 }
 .highlight__progress--up {
-  color: hsl(163deg, 72%, 41%);
+  color: hsl(163, 72%, 41%);
 }
 .highlight__progress--down {
-  color: hsl(356deg, 69%, 56%);
+  color: hsl(356, 69%, 56%);
 }
 .highlight__progress-icon {
   width: 5px;
@@ -176,7 +170,7 @@ body {
 }
 
 .overview-facebook-card {
-  background-color: hsl(228deg, 28%, 20%);
+  background-color: hsl(228, 28%, 20%);
   padding: 10px 5px;
   display: flex;
   flex-direction: column;
@@ -205,5 +199,4 @@ body {
 .facebook-icon {
   padding-right: 25px;
   margin-bottom: 10px;
-  /* The .facebook-icon class has a right padding that might be excessive depending on your layout. */
 }/*# sourceMappingURL=style.css.map */
